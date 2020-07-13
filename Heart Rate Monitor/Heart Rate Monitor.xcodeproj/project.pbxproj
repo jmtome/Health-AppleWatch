@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C88BF97724BCB80100E70010 /* WeightInterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C88BF97524BCB7FC00E70010 /* WeightInterfaceController.swift */; };
 		C89DF04E24BBE285008062B6 /* HealthKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C89DF04D24BBE285008062B6 /* HealthKit.framework */; };
 		C89DF05124BBE2AE008062B6 /* HealthKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C89DF05024BBE2AE008062B6 /* HealthKit.framework */; };
 		D0CD4EB522F91B8A00A37B97 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0CD4EB422F91B8A00A37B97 /* AppDelegate.swift */; };
@@ -67,6 +68,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		C88BF97524BCB7FC00E70010 /* WeightInterfaceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeightInterfaceController.swift; sourceTree = "<group>"; };
 		C89DF04B24BBE285008062B6 /* Heart Rate Monitor.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "Heart Rate Monitor.entitlements"; sourceTree = "<group>"; };
 		C89DF04D24BBE285008062B6 /* HealthKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = HealthKit.framework; path = System/Library/Frameworks/HealthKit.framework; sourceTree = SDKROOT; };
 		C89DF04F24BBE2AE008062B6 /* Heart Rate Monitor WatchKit Extension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "Heart Rate Monitor WatchKit Extension.entitlements"; sourceTree = "<group>"; };
@@ -167,8 +169,9 @@
 		D0CD4ED622F91B8C00A37B97 /* Heart Rate Monitor WatchKit Extension */ = {
 			isa = PBXGroup;
 			children = (
-				C89DF04F24BBE2AE008062B6 /* Heart Rate Monitor WatchKit Extension.entitlements */,
+				C88BF97524BCB7FC00E70010 /* WeightInterfaceController.swift */,
 				D0CD4ED722F91B8C00A37B97 /* InterfaceController.swift */,
+				C89DF04F24BBE2AE008062B6 /* Heart Rate Monitor WatchKit Extension.entitlements */,
 				D0CD4ED922F91B8C00A37B97 /* ExtensionDelegate.swift */,
 				D0CD4EDB22F91B8C00A37B97 /* Assets.xcassets */,
 				D0CD4EDD22F91B8C00A37B97 /* Info.plist */,
@@ -321,6 +324,7 @@
 			files = (
 				D0CD4EDA22F91B8C00A37B97 /* ExtensionDelegate.swift in Sources */,
 				D0CD4ED822F91B8C00A37B97 /* InterfaceController.swift in Sources */,
+				C88BF97724BCB80100E70010 /* WeightInterfaceController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

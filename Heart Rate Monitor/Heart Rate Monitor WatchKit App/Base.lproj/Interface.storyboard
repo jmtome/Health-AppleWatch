@@ -1,12 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="14490.70" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="AgC-eL-Hgc">
-    <device id="watch38" orientation="portrait">
-        <adaptation id="fullscreen"/>
-    </device>
+<document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="16097" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="AgC-eL-Hgc">
+    <device id="watch38"/>
     <dependencies>
-        <deployment identifier="watchOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBWatchKitPlugin" version="14490.21"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBWatchKitPlugin" version="16012"/>
     </dependencies>
     <scenes>
         <!--Interface Controller-->
@@ -14,6 +11,11 @@
             <objects>
                 <controller id="AgC-eL-Hgc" customClass="InterfaceController" customModule="Heart_Rate_Monitor_WatchKit_App" customModuleProvider="target">
                     <items>
+                        <button width="1" alignment="left" title="Add Weight" id="Jlx-Uh-XVE">
+                            <connections>
+                                <segue destination="hP1-Bm-u8K" kind="push" id="wqP-o5-eeB"/>
+                            </connections>
+                        </button>
                         <label alignment="center" text="Heart Rate" id="cLc-4E-1bw">
                             <fontDescription key="font" style="UICTFontTextStyleTitle2"/>
                         </label>
@@ -37,6 +39,26 @@
                     </connections>
                 </controller>
             </objects>
+            <point key="canvasLocation" x="126" y="57"/>
+        </scene>
+        <!--Weight Interface Controller-->
+        <scene sceneID="6oW-VU-WX5">
+            <objects>
+                <controller id="hP1-Bm-u8K" customClass="WeightInterfaceController" customModule="Heart_Rate_Monitor_WatchKit_Extension">
+                    <items>
+                        <button width="1" alignment="left" title="send info" id="1ko-JS-9mA">
+                            <connections>
+                                <action selector="sendWeightToiPhone" destination="hP1-Bm-u8K" id="OvJ-mT-Zuc"/>
+                            </connections>
+                        </button>
+                        <label width="136" height="41" alignment="left" text="weight" textAlignment="center" id="57f-6R-bpa"/>
+                    </items>
+                    <connections>
+                        <outlet property="weightLabel" destination="57f-6R-bpa" id="yZ2-KY-loX"/>
+                    </connections>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="433" y="56"/>
         </scene>
     </scenes>
 </document>

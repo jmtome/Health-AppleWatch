@@ -1,10 +1,11 @@
 //
-//  AppDelegate.swift
+//  WeightInterfaceController.swift
 //  Heart Rate Monitor
 //
-//  Created by Justin Trautman on 8/5/19.
-//  Copyright © 2019 Watch Coder. All rights reserved.
+//  Created by Juan Manuel Tome on 13/07/2020.
+//  Copyright © 2020 Watch Coder. All rights reserved.
 //
+
 
 import UIKit
 import HealthKit
@@ -28,7 +29,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         }
     }
     func requestHealthKitPermission() {
-        let sampleType: Set<HKSampleType> = [HKSampleType.quantityType(forIdentifier: .heartRate)!]
+        let sampleType: Set<HKSampleType> = [HKSampleType.quantityType(forIdentifier: .heartRate)!,HKObjectType.quantityType(forIdentifier: .bodyMass)!]
         let healthStore = HKHealthStore()
         
         healthStore.requestAuthorization(toShare: sampleType, read: sampleType) { (success, error) in
