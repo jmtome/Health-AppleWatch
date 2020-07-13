@@ -76,7 +76,7 @@ extension ViewController: WCSessionDelegate {
             if let weightMSG = message["weight"] {
                 print(weightMSG)
                 self.weight.text = "\(weightMSG)"
-                self.weightValue = (weightMSG as! NSString).doubleValue / 2
+                self.weightValue = (weightMSG as! NSString).doubleValue / 2.2
             }
             self.writeWeight()
         }

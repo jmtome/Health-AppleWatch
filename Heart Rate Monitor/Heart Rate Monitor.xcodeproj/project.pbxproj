@@ -8,6 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		C88BF97724BCB80100E70010 /* WeightInterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C88BF97524BCB7FC00E70010 /* WeightInterfaceController.swift */; };
+		C895FA4524BCD101002A6925 /* TimePickerDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = C895FA4424BCD101002A6925 /* TimePickerDataSource.swift */; };
+		C895FA4824BCD16D002A6925 /* TimeInterface.swift in Sources */ = {isa = PBXBuildFile; fileRef = C895FA4624BCD166002A6925 /* TimeInterface.swift */; };
+		C895FA4B24BCD4D7002A6925 /* AddWeightInterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C895FA4924BCD4D5002A6925 /* AddWeightInterfaceController.swift */; };
+		C895FA4D24BCD592002A6925 /* WeightPickerDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = C895FA4C24BCD592002A6925 /* WeightPickerDataSource.swift */; };
 		C89DF04E24BBE285008062B6 /* HealthKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C89DF04D24BBE285008062B6 /* HealthKit.framework */; };
 		C89DF05124BBE2AE008062B6 /* HealthKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C89DF05024BBE2AE008062B6 /* HealthKit.framework */; };
 		D0CD4EB522F91B8A00A37B97 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0CD4EB422F91B8A00A37B97 /* AppDelegate.swift */; };
@@ -69,6 +73,10 @@
 
 /* Begin PBXFileReference section */
 		C88BF97524BCB7FC00E70010 /* WeightInterfaceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeightInterfaceController.swift; sourceTree = "<group>"; };
+		C895FA4424BCD101002A6925 /* TimePickerDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimePickerDataSource.swift; sourceTree = "<group>"; };
+		C895FA4624BCD166002A6925 /* TimeInterface.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeInterface.swift; sourceTree = "<group>"; };
+		C895FA4924BCD4D5002A6925 /* AddWeightInterfaceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddWeightInterfaceController.swift; sourceTree = "<group>"; };
+		C895FA4C24BCD592002A6925 /* WeightPickerDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeightPickerDataSource.swift; sourceTree = "<group>"; };
 		C89DF04B24BBE285008062B6 /* Heart Rate Monitor.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "Heart Rate Monitor.entitlements"; sourceTree = "<group>"; };
 		C89DF04D24BBE285008062B6 /* HealthKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = HealthKit.framework; path = System/Library/Frameworks/HealthKit.framework; sourceTree = SDKROOT; };
 		C89DF04F24BBE2AE008062B6 /* Heart Rate Monitor WatchKit Extension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "Heart Rate Monitor WatchKit Extension.entitlements"; sourceTree = "<group>"; };
@@ -169,7 +177,11 @@
 		D0CD4ED622F91B8C00A37B97 /* Heart Rate Monitor WatchKit Extension */ = {
 			isa = PBXGroup;
 			children = (
+				C895FA4C24BCD592002A6925 /* WeightPickerDataSource.swift */,
+				C895FA4624BCD166002A6925 /* TimeInterface.swift */,
+				C895FA4924BCD4D5002A6925 /* AddWeightInterfaceController.swift */,
 				C88BF97524BCB7FC00E70010 /* WeightInterfaceController.swift */,
+				C895FA4424BCD101002A6925 /* TimePickerDataSource.swift */,
 				D0CD4ED722F91B8C00A37B97 /* InterfaceController.swift */,
 				C89DF04F24BBE2AE008062B6 /* Heart Rate Monitor WatchKit Extension.entitlements */,
 				D0CD4ED922F91B8C00A37B97 /* ExtensionDelegate.swift */,
@@ -323,8 +335,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				D0CD4EDA22F91B8C00A37B97 /* ExtensionDelegate.swift in Sources */,
+				C895FA4D24BCD592002A6925 /* WeightPickerDataSource.swift in Sources */,
+				C895FA4824BCD16D002A6925 /* TimeInterface.swift in Sources */,
+				C895FA4524BCD101002A6925 /* TimePickerDataSource.swift in Sources */,
 				D0CD4ED822F91B8C00A37B97 /* InterfaceController.swift in Sources */,
 				C88BF97724BCB80100E70010 /* WeightInterfaceController.swift in Sources */,
+				C895FA4B24BCD4D7002A6925 /* AddWeightInterfaceController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

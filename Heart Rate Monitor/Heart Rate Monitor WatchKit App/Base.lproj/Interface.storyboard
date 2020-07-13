@@ -46,12 +46,23 @@
             <objects>
                 <controller id="hP1-Bm-u8K" customClass="WeightInterfaceController" customModule="Heart_Rate_Monitor_WatchKit_Extension">
                     <items>
-                        <button width="1" alignment="left" title="send info" id="1ko-JS-9mA">
+                        <group width="136" height="43" alignment="left" id="Xzu-2A-aMN">
+                            <items>
+                                <label width="64" height="40" alignment="left" text="weight" textAlignment="center" id="57f-6R-bpa"/>
+                                <button width="67" height="43" alignment="left" title="Add" id="1ko-JS-9mA">
+                                    <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <fontDescription key="font" type="system" pointSize="15"/>
+                                    <connections>
+                                        <action selector="sendWeightToiPhone" destination="hP1-Bm-u8K" id="OvJ-mT-Zuc"/>
+                                    </connections>
+                                </button>
+                            </items>
+                        </group>
+                        <button width="1" alignment="left" title="Button" id="vbj-0F-5TK">
                             <connections>
-                                <action selector="sendWeightToiPhone" destination="hP1-Bm-u8K" id="OvJ-mT-Zuc"/>
+                                <segue destination="uvA-yn-3Mh" kind="push" id="MIc-fB-veL"/>
                             </connections>
                         </button>
-                        <label width="136" height="41" alignment="left" text="weight" textAlignment="center" id="57f-6R-bpa"/>
                     </items>
                     <connections>
                         <outlet property="weightLabel" destination="57f-6R-bpa" id="yZ2-KY-loX"/>
@@ -59,6 +70,95 @@
                 </controller>
             </objects>
             <point key="canvasLocation" x="433" y="56"/>
+        </scene>
+        <!--Time Interface Controller-->
+        <scene sceneID="t8H-tP-WUP">
+            <objects>
+                <controller id="g8b-j6-Iid" customClass="TimeInterfaceController" customModule="Heart_Rate_Monitor_WatchKit_Extension">
+                    <items>
+                        <label width="125" alignment="left" text="WatchKit Time Picker" numberOfLines="0" id="2XD-xD-5wr">
+                            <fontDescription key="font" type="boldSystem" pointSize="16"/>
+                        </label>
+                        <group width="1" height="65" alignment="left" id="JvQ-T3-dBp">
+                            <items>
+                                <picker width="0.3333333" height="1" alignment="left" focusStyle="stack" indicatorMode="shownWhileFocused" id="Ms2-U0-Osr">
+                                    <connections>
+                                        <action selector="hourPickerDidUpdate:" destination="g8b-j6-Iid" id="5od-aK-l1x"/>
+                                    </connections>
+                                </picker>
+                                <picker width="0.3333333" height="1" alignment="left" focusStyle="stack" indicatorMode="shownWhileFocused" id="IZU-ST-iw5">
+                                    <connections>
+                                        <action selector="minutePickerDidUpdate:" destination="g8b-j6-Iid" id="AgP-dY-X98"/>
+                                    </connections>
+                                </picker>
+                                <picker width="0.3333333" height="1" alignment="left" focusStyle="stack" indicatorMode="shownWhileFocused" id="LS9-2c-i2Y">
+                                    <connections>
+                                        <action selector="amPmPickerDidUpdate:" destination="g8b-j6-Iid" id="Aft-K4-ATa"/>
+                                    </connections>
+                                </picker>
+                            </items>
+                        </group>
+                        <label alignment="left" text="Time Label" id="HfO-sF-c95"/>
+                    </items>
+                    <connections>
+                        <outlet property="amPmTimePicker" destination="LS9-2c-i2Y" id="6GB-HJ-btG"/>
+                        <outlet property="hourTimePicker" destination="Ms2-U0-Osr" id="S1N-HW-8DN"/>
+                        <outlet property="minuteTimePicker" destination="IZU-ST-iw5" id="3Nv-Yp-DAk"/>
+                        <outlet property="selectedTimeLabel" destination="HfO-sF-c95" id="p7H-rT-vmc"/>
+                    </connections>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="722" y="-20"/>
+        </scene>
+        <!--Add Weight Interface Controller-->
+        <scene sceneID="DGB-le-1Te">
+            <objects>
+                <controller id="uvA-yn-3Mh" customClass="AddWeightInterfaceController" customModule="Heart_Rate_Monitor_WatchKit_Extension">
+                    <items>
+                        <group width="1" alignment="left" id="tBu-Hw-CYC">
+                            <items>
+                                <label width="68" alignment="left" text="Add New Weight" numberOfLines="0" id="4lJ-rh-ih3">
+                                    <fontDescription key="font" type="boldSystem" pointSize="16"/>
+                                </label>
+                                <button width="62" alignment="left" title="Add" id="3Eg-t9-iIg">
+                                    <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <fontDescription key="font" type="system" pointSize="15"/>
+                                    <connections>
+                                        <action selector="sendWeightToiPhone" destination="uvA-yn-3Mh" id="Qgm-mc-eTn"/>
+                                    </connections>
+                                </button>
+                            </items>
+                        </group>
+                        <group width="1" height="65" alignment="left" id="sGi-56-gwS">
+                            <items>
+                                <picker width="0.3333333" height="1" alignment="left" focusStyle="stack" indicatorMode="shownWhileFocused" id="mpS-5n-66M" userLabel="ten">
+                                    <connections>
+                                        <action selector="tenPickerDidUpdate:" destination="uvA-yn-3Mh" id="55M-D3-O5s"/>
+                                    </connections>
+                                </picker>
+                                <picker width="0.3333333" height="1" alignment="left" focusStyle="stack" indicatorMode="shownWhileFocused" id="RIQ-zG-ecm" userLabel="unit">
+                                    <connections>
+                                        <action selector="unitPickerDidUpdate:" destination="uvA-yn-3Mh" id="dVW-Vt-cTt"/>
+                                    </connections>
+                                </picker>
+                                <picker width="0.3333333" height="1" alignment="left" focusStyle="stack" indicatorMode="shownWhileFocused" id="r5s-ZT-bJo" userLabel="comma">
+                                    <connections>
+                                        <action selector="commaPickerDidUpdate:" destination="uvA-yn-3Mh" id="NLt-IL-DFM"/>
+                                    </connections>
+                                </picker>
+                            </items>
+                        </group>
+                        <label width="136" alignment="left" text="Weight" textAlignment="center" id="1cO-Ls-P7G" userLabel="Weight"/>
+                    </items>
+                    <connections>
+                        <outlet property="commaWeight" destination="r5s-ZT-bJo" id="CxU-ud-H6P"/>
+                        <outlet property="tenWeight" destination="mpS-5n-66M" id="54T-9I-v9S"/>
+                        <outlet property="unitWeight" destination="RIQ-zG-ecm" id="PhM-Iu-IIf"/>
+                        <outlet property="weightLabel" destination="1cO-Ls-P7G" id="gnn-ZT-wLJ"/>
+                    </connections>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="627" y="425"/>
         </scene>
     </scenes>
 </document>
